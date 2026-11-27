@@ -56,7 +56,10 @@ export default function AssignmentTracker() {
   };
 
   useEffect(() => {
-    loadAssignments();
+    async function init() {
+      await loadAssignments();
+    }
+    init();
   }, []);
 
   return (

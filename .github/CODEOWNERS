@@ -1,0 +1,17 @@
+# Code Owners - assigns review responsibility
+* @nadeemsahu
+
+# GitHub Actions workflow files
+.github/workflows/* @nadeemsahu
+
+# Assignment tracking logic
+lib/* @nadeemsahu
+
+# TypeScript configuration
+tsconfig.json @nadeemsahu
+
+# Next.js configuration
+next.config.ts @nadeemsahu
+
+# Test files
+vitest.setup.ts @nadeemsahu

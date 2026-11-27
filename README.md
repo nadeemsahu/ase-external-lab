@@ -1,3 +1,8 @@
+# Student Assignment Tracker
+
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nadeemsahu/ase-external-lab/ci.yml?branch=main&label=CI)](https://github.com/nadeemsahu/ase-external-lab/actions/workflows/ci.yml)
+[![Docker Image Size](https://img.shields.io/docker/image-size/nadeemsahu/student-tracker?label=Docker)](https://hub.docker.com/r/nadeemsahu/student-tracker)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

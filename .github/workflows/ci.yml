@@ -54,10 +54,10 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: nadeemsahu/student-tracker
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/student-tracker
           tags: |
-            type=ref,format=short,suffix=-${{ github.sha }}
-            type=ref,format=short,prefix=stable-
+            type=sha,format=short
+            type=raw,value=stable,enable={{is_default_branch}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -65,8 +65,8 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=registry,ref=nadeemsahu/student-tracker:buildcache
-          cache-to: type=registry,ref=nadeemsahu/student-tracker:buildcache,mode=max
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/student-tracker:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/student-tracker:buildcache,mode=max
 
   lint:
     runs-on: ubuntu-latest
